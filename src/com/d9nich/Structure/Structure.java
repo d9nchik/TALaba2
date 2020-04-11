@@ -51,7 +51,6 @@ public class Structure {
                 return temporary.getValue();
             temporary = temporary.getNextElement();
         }
-        //System.out.println("Key not found!");
         return null;
     }
 }
