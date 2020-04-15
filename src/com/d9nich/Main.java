@@ -7,14 +7,16 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        Structure structure = generator(100);
-        System.out.println(structure.show("123"));
+        Structure structure = generator();
+        structure.add("123", "hi Dan");
+        System.out.println(structure.showNumberOFCompare("123"));
+        System.out.println(structure.getFullyOfMatrix());
     }
 
-    private static Structure generator(int numberofelements) {
+    private static Structure generator() {
         Structure structure = new Structure();
         Random random = new Random();
-        for (int i = 0; i < numberofelements; i++) {
+        for (int i = 0; i < 2000; i++) {
             StringBuilder key = new StringBuilder();
             for (int j = 0; j < random.nextInt(20); j++) {
                 int choice = random.nextInt(('9' - '0' + 1) + ('Z' - 'A' + 1));
